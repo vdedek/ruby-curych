@@ -15,7 +15,7 @@ while kanec > 0
   while kanec > 9
     puts 'Běží na tebe kanec!'
     ans = gets_with_timeout(rand(5..10))
-    if ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(ans)
+    if ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(ans.strip.downcase)
       puts 'Podařilo se ti utéci!'
     else
       puts 'Nabral tě!'
@@ -26,7 +26,7 @@ while kanec > 0
   end
   puts 'Běží na tebe další kanec!'
   ans [0] = gets_with_timeout(rand(5..10))
-  if ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(ans)
+  if ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(ans.strip.downcase)
     puts 'Utelk jsi!'
   else
     puts 'A nabral tě!'
