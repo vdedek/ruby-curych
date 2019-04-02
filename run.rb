@@ -1,5 +1,7 @@
 require 'timeout'
+require 'pry'
 
+# binding pry: binding.pry
 # VERZE S METODOU
 
 def gets_with_timeout(sec, timeout_val = nil)
