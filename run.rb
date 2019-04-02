@@ -15,7 +15,7 @@ while kanec > 0
   while kanec > 9
     puts 'Běží na tebe kanec!'
     ans [0] = gets_with_timeout(rand(5..10))
-    if ans.Include?('utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč')
+    if ans.any? { |x| ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(x) }
       puts 'Podařilo se ti utéci!'
     else
       puts 'Nabral tě!'
@@ -26,7 +26,7 @@ while kanec > 0
   end
   puts 'Běží na tebe další kanec!'
   ans [0] = gets_with_timeout(rand(5..10))
-  if ans.Include?('utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč')
+  if ans.any? { |x| ['utíkám', 'utikam', 'bezim', 'běžím', 'běžím pryč'].include?(x) }
     puts 'Utelk jsi!'
   else
     puts 'A nabral tě!'
